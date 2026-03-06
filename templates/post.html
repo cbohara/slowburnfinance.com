@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+
+{% block title %}{{ post.title }} — Slow Burn Finance{% endblock %}
+{% block description %}{{ post.excerpt }}{% endblock %}
+
+{% block content %}
+<article class="post" id="post-content">
+    <header class="post-header">
+        <div class="section-inner">
+            <a href="/blog/" class="post-back" id="post-back">← All posts</a>
+            <time class="post-date">{{ post.date }}</time>
+            <h1 class="post-title">{{ post.title }}</h1>
+            {% if post.excerpt %}
+            <p class="post-lede">{{ post.excerpt }}</p>
+            {% endif %}
+        </div>
+    </header>
+    <div class="post-body section-inner">
+        {{ post.content }}
+    </div>
+</article>
+
+<!-- Post footer signup -->
+<section class="signup signup-compact" id="post-signup">
+    <div class="section-inner">
+        <div class="signup-card">
+            <h2 class="signup-title">Want to follow along?</h2>
+            <p class="signup-text">
+                New posts and updates, delivered when they're ready. No spam.
+            </p>
+            <form
+                class="signup-form embeddable-buttondown-form"
+                id="post-signup-form"
+                action="https://buttondown.com/api/emails/embed-subscribe/slowburnfinance"
+                method="post"
+                referrerpolicy="unsafe-url"
+            >
+                <div class="signup-input-group">
+                    <input
+                        type="email"
+                        name="email"
+                        id="post-signup-email"
+                        placeholder="you@example.com"
+                        required
+                        class="signup-input"
+                        aria-label="Email address"
+                    >
+                    <button type="submit" class="signup-button" id="post-signup-submit">
+                        Subscribe
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+{% endblock %}

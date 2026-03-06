@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Slow Burn Finance{% endblock %}</title>
+    <meta name="description" content="{% block description %}Patient money. Intentional life. A personal finance blog about building freedom slowly and deliberately.{% endblock %}">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <nav class="nav" id="main-nav">
+        <div class="nav-inner">
+            <a href="/" class="nav-logo" id="nav-logo">
+                <span class="logo-slow">slow</span><span class="logo-burn">burn</span>
+            </a>
+            <div class="nav-links">
+                <a href="/blog/" class="nav-link {% if current_page == 'blog' %}active{% endif %}" id="nav-blog">Blog</a>
+                <a href="/#signup" class="nav-link nav-cta" id="nav-signup">Stay in the loop</a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer class="footer" id="footer">
+        <div class="footer-inner">
+            <p class="footer-text">&copy; 2026 Slow Burn Finance. Built with patience.</p>
+        </div>
+    </footer>
+
+    <script src="/js/main.js"></script>
+</body>
+</html>

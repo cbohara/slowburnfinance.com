@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block title %}Blog — Slow Burn Finance{% endblock %}
+{% block description %}All posts from Slow Burn Finance. Learning personal finance in public, one post at a time.{% endblock %}
+
+{% block content %}
+<section class="blog-listing" id="blog-listing">
+    <div class="section-inner">
+        <h1 class="page-title">Blog</h1>
+        <p class="page-subtitle">Learning in public, one post at a time.</p>
+
+        <div class="post-list">
+            {% for post in posts %}
+            <a href="{{ post.url }}" class="post-card" id="post-card-{{ post.slug }}">
+                <time class="post-date">{{ post.date }}</time>
+                <h3 class="post-card-title">{{ post.title }}</h3>
+                <p class="post-excerpt">{{ post.excerpt }}</p>
+                <span class="post-read-more">Read →</span>
+            </a>
+            {% endfor %}
+        </div>
+
+        {% if not posts %}
+        <p class="empty-state">No posts yet. The first one is coming soon.</p>
+        {% endif %}
+    </div>
+</section>
+{% endblock %}

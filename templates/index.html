@@ -1,0 +1,103 @@
+{% extends "base.html" %}
+
+{% block title %}Slow Burn Finance — Patient money. Intentional life.{% endblock %}
+
+{% block content %}
+<!-- Hero -->
+<section class="hero" id="hero">
+    <div class="hero-inner">
+        <p class="hero-label">A personal finance blog</p>
+        <h1 class="hero-title">
+            Patient money.<br>
+            <span class="hero-accent">Intentional life.</span>
+        </h1>
+        <p class="hero-subtitle">
+            I'm building my financial knowledge in public — slowly, honestly,
+            and without the hustle-culture nonsense. If you're smart and capable
+            but still feel anxious about money, you're in the right place.
+        </p>
+    </div>
+    <div class="hero-ember"></div>
+</section>
+
+<!-- About -->
+<section class="about" id="about">
+    <div class="section-inner">
+        <h2 class="section-title">What is this?</h2>
+        <div class="about-content">
+            <p>
+                Slow Burn Finance is a blog about learning personal finance
+                by doing it — not performing expertise, but documenting the
+                real process of understanding your own money.
+            </p>
+            <p>
+                I'm a software engineer on a FIRE path who was told I could retire
+                at 47. Instead of just trusting the number, I decided to actually
+                understand it. This blog is that journey.
+            </p>
+            <p>
+                If you're done with hustle culture but serious about freedom —
+                if you don't see yourself in mainstream finance content —
+                if you're building steadily toward something meaningful,
+                not chasing a number for its own sake — welcome.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- Latest Posts -->
+{% if posts %}
+<section class="latest-posts" id="latest-posts">
+    <div class="section-inner">
+        <h2 class="section-title">Latest</h2>
+        <div class="post-list">
+            {% for post in posts[:3] %}
+            <a href="{{ post.url }}" class="post-card" id="post-card-{{ post.slug }}">
+                <time class="post-date">{{ post.date }}</time>
+                <h3 class="post-card-title">{{ post.title }}</h3>
+                <p class="post-excerpt">{{ post.excerpt }}</p>
+                <span class="post-read-more">Read →</span>
+            </a>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+{% endif %}
+
+<!-- Email Signup -->
+<section class="signup" id="signup">
+    <div class="section-inner">
+        <div class="signup-card">
+            <h2 class="signup-title">I'm just getting started.</h2>
+            <p class="signup-text">
+                If you want to follow along as I figure this out — new posts,
+                things I'm learning, occasional updates — drop your email.
+                No spam. No sales funnels. Just a slow burn.
+            </p>
+            <form
+                class="signup-form embeddable-buttondown-form"
+                id="signup-form"
+                action="https://buttondown.com/api/emails/embed-subscribe/slowburnfinance"
+                method="post"
+                referrerpolicy="unsafe-url"
+            >
+                <div class="signup-input-group">
+                    <input
+                        type="email"
+                        name="email"
+                        id="signup-email"
+                        placeholder="you@example.com"
+                        required
+                        class="signup-input"
+                        aria-label="Email address"
+                    >
+                    <button type="submit" class="signup-button" id="signup-submit">
+                        Subscribe
+                    </button>
+                </div>
+                <p class="signup-note">Free, unsubscribe anytime. Powered by Buttondown.</p>
+            </form>
+        </div>
+    </div>
+</section>
+{% endblock %}
