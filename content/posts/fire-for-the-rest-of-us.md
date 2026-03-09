@@ -22,7 +22,7 @@ Most financial advice starts cold. It starts with what you're doing wrong. You'r
 
 And for a lot of people — smart, capable people — that coldness triggers a freeze. Not laziness. Not ignorance. A genuine neurological shutdown where your brain decides this topic is threatening and quietly exits the room.
 
-I know because that was me. I can learn machine learning. I can debug distributed systems. But for years, the moment someone said "portfolio rebalancing" my brain went somewhere else entirely.
+I know because that was me. I know I'm smart and capable enough to learn complex topics — but for years, the moment someone said "portfolio rebalancing" my brain went somewhere else entirely.
 
 Going where it's warm means starting with what's already working. Starting with curiosity instead of shame. Starting with the parts of your financial life that feel approachable and building outward from there — slowly, honestly, without pretending you should already know everything.
 
